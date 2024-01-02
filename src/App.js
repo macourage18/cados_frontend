@@ -1,17 +1,17 @@
 import './App.css';
-import  {BrowserRouter,Routes,Route} from "react-router-dom"
+import  {BrowserRouter as Router, Routes,Route} from "react-router-dom"
 import { Home } from "./pages/Home.js"
 import { Advocates } from "./pages/Advocates.js"
 
 function App() {
   return (
     <div className="App">
-    <BrowserRouter>
+    <Router> 
       <Routes>
-        <Route to = {"/"} element={Home} />
-        <Route to = {"/Advocates"} element={Advocates} />
+        <Route path= {"/"} element={<Home />} />
+        <Route path = {"/Advocates/ :username"} element={<Advocates />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
       
     </div>
   );
