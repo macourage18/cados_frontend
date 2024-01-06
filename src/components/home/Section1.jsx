@@ -22,6 +22,7 @@ export const Section1 = () => {
       <div>
         {advocates.map((advocates, index)=>(
             <div key={index}> 
+            <img src={advocates.profilePic} alt=""/>
             <strong>{advocates.username}</strong>
             <Link to={`/Advocates/${advocates.username}`}>view</Link>
             </div>

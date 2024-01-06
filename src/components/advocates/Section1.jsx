@@ -24,7 +24,6 @@ export const Section1 = () => {
     <>
     {advocate && (
       <div>
-      <img src={advocate.profilePic} alt=""/>
       <h1>{advocate.username}</h1>
       <p>{advocate.bio}</p>
     </div>
