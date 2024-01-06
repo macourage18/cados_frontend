@@ -26,7 +26,7 @@ export const Section1 = () => {
       <div>
       <h1>{advocate.username}</h1>
       <p>{advocate.bio}</p>
-    </div>
+      </div>
     )}
     </>
    

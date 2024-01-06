@@ -20,10 +20,10 @@ export const Section1 = () => {
     <div>
       <h1>Home</h1>
       <div>
-        {advocates.map((advocates, index)=>(
+        {advocates.map((advocate, index)=>(
             <div key={index}> 
-            <img src={advocates.profilePic} alt=""/>
-            <strong>{advocates.username}</strong>
+            <img src={advocate.profilePic} alt=""/>
+            <strong>{advocate.username}</strong>
             <Link to={`/Advocates/${advocates.username}`}>view</Link>
             </div>
         ))}
