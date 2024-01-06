@@ -10,15 +10,32 @@ export const Section1 = () => {
 
   const [advocate, setAdvocate] = useState([])
 
-  useEffect(()=>{
-    getData()
-  },[username])
 
-  const getData = async ()=>{
-    let response = await axios.get(`https://cados-api.onrender.com/advocates/${username}`)
-    console.log('RESPONSE:', response)
-    setAdvocate(response.data)
-  }
+
+useEffect(() => {
+  const getData = async () => {
+    try {
+      let response = await axios.get(`https://cados-api.onrender.com/advocates/${username}`)
+      console.log('RESPONSE:', response)
+      setAdvocate(response.data)
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  getData();
+
+}, [username]);
+
+  // useEffect(()=>{
+  //   getData()
+  // },[username])
+
+  // const getData = async ()=>{
+  //   let response = await axios.get(`https://cados-api.onrender.com/advocates/${username}`)
+  //   console.log('RESPONSE:', response)
+  //   setAdvocate(response.data)
+  // }
 
   return (
     <>

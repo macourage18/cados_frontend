@@ -13,7 +13,7 @@ export const Section1 = () => {
   let getData = async()=>{
     let response = await Axios.get("https://cados-api.onrender.com/advocates/")
     console.log('RESPONSE:', response)
-    setAdvocates(response.data.advocates)
+    setAdvocates(response.data)
   }
 
   return (
@@ -22,13 +22,12 @@ export const Section1 = () => {
       <div>
         {advocates.map((advocate, index)=>(
             <div key={index}> 
-            <img src={advocate.profilePic} alt=""/>
+            {/* <img src={advocate.profilePic} alt=""/> */}
             <strong>{advocate.username}</strong>
-            <Link to={`/Advocates/${advocates.username}`}>view</Link>
+            <Link to={`/Advocates/${advocate.username}`}>view</Link>
             </div>
         ))}
       </div>
-      
     </div>
   )
 }
