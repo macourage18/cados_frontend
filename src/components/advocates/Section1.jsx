@@ -17,13 +17,14 @@ export const Section1 = () => {
   const getData = async ()=>{
     let response = await axios.get(`https://cados-api.onrender.com/advocates/${username}`)
     console.log('RESPONSE:', response)
-    setAdvocate(response.data)
+    setAdvocate(response.data.advocates)
   }
 
   return (
     <>
     {advocate && (
       <div>
+      <img src={advocate.profilePic} alt=""/>
       <h1>{advocate.username}</h1>
       <p>{advocate.bio}</p>
     </div>
