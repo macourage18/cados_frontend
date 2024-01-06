@@ -8,7 +8,7 @@ export const Section1 = () => {
   const params = useParams()
   const username = params.username
 
-  const [advocate, setAdvocate] = useState([])
+  const [advocate, setAdvocate] = useState(null)
 
 
 
