@@ -14,10 +14,10 @@ export const Section1 = () => {
     try{
       let response = await Axios.get("https://cados-api.onrender.com/advocates/")
       console.log('RESPONSE:', response)
-      setAdvocates(response.data.advocates)
+      setAdvocates(response.data)
     }
     catch (error) {
-      console.error('Error Fetching Data', error)
+      console.error('Error:', error)
     }
   }
 
