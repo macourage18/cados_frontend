@@ -11,9 +11,14 @@ export const Section1 = () => {
   }, [])
 
   let getData = async()=>{
-    let response = await Axios.get("https://cados-api.onrender.com/advocates/")
-    console.log('RESPONSE:', response)
-    setAdvocates(response.data.advocates)
+    try{
+      let response = await Axios.get("https://cados-api.onrender.com/advocates/")
+      console.log('RESPONSE:', response)
+      setAdvocates(response.data.advocates)
+    }
+    catch (error) {
+      console.error('Error Fetching Data', error)
+    }
   }
 
   return (
