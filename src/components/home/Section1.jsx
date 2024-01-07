@@ -12,7 +12,7 @@ useEffect(() => {
     try {
       let response = await Axios.get("https://cados-api.onrender.com/advocates/");
       console.log('RESPONSE:', response);
-      setAdvocates(response.data);
+      setAdvocates(response.data.advocates);
       setLoading(false);
     } catch (error) {
       console.error('Error:', error);
