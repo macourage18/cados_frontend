@@ -24,7 +24,7 @@ export const Section1 = () => {
             <div key={index}> 
             <img src={advocate.profilePic} alt=""/>
             <strong>{advocate.username}</strong>
-            <Link to={`/Advocates/${advocates.username}`}>view</Link>
+            <Link to={`/Advocates/${advocate.username}`}>view</Link>
             </div>
         ))}
       </div>
