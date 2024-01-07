@@ -30,7 +30,7 @@ export const Section1 = () => {
             <img src={advocate.profilePic} alt=""/>
             <strong>{advocate.username}</strong>
             {console.log('advocate:', advocate)}
-            <Link to={`/Advocates/${advocate.username}`}>view</Link>
+            <Link to={`/Advocates/${advocate.username || ''}`}>view</Link>
             </div>
         ))}
       </div>
