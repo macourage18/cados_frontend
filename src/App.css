@@ -1,9 +1,7 @@
 body{
   background-color: #282c34;
   color: aliceblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 10%;
 }
 
 a{
@@ -25,7 +23,4 @@ a{
 }
 .wrapper{
   width: 300px;
-}
-.mainCont{
-  width: 1222px;
 }
