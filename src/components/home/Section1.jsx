@@ -29,8 +29,8 @@ if (loading) {
 
   return (
     <div>
-      <h1>Home</h1>
-      <div>
+      <h2>Search developer advocates on this platform</h2>
+      <div className={'advocateList'}>
         {advocates.map((advocate, index)=>(
             <div className={'wrapper'} key={index}> 
             <img className={'adpfdp'} src={advocate.advocates.profilePic} alt=""/>
