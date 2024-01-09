@@ -32,8 +32,8 @@ if (loading) {
       <h1>Home</h1>
       <div>
         {advocates.map((advocate, index)=>(
-            <div key={index}> 
-            <img src={advocate.advocates.profilePic} alt=""/>
+            <div className={'wrapper'} key={index}> 
+            <img className={'adpfdp'} src={advocate.advocates.profilePic} alt=""/>
             <strong>{advocate.advocates.advocate.username}</strong>
             {console.log('advocate:', advocate)}
             <Link to={`/Advocates/${advocate.advocates.advocate.username}`}>view</Link>
