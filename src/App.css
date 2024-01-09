@@ -14,3 +14,9 @@ a{
   border: 3px solid aquamarine;
   object-fit: cover;
 }
+
+advocateList{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
