@@ -35,6 +35,7 @@ if (loading) {
             <div className={'wrapper'} key={index}> 
             <img className={'adpfdp'} src={advocate.advocates.profilePic} alt=""/>
             <strong>{advocate.advocates.advocate.username}</strong>
+            <p>{advocate.advocates.advocate.bio}</p>
             {console.log('advocate:', advocate)}
             <Link to={`/Advocates/${advocate.advocates.advocate.username}`}>view</Link>
             </div>
