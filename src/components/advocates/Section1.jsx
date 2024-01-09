@@ -27,16 +27,6 @@ useEffect(() => {
 
 }, [username]);
 
-  // useEffect(()=>{
-  //   getData()
-  // },[username])
-
-  // const getData = async ()=>{
-  //   let response = await axios.get(`https://cados-api.onrender.com/advocates/${username}`)
-  //   console.log('RESPONSE:', response)
-  //   setAdvocate(response.data)
-  // }
-
   return (
     <>
     {advocate && (

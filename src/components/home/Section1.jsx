@@ -27,31 +27,16 @@ if (loading) {
   return <p>Loading...</p>;
 }
 
-  // useEffect(()=>{
-  //   getData()
-  // }, [])
-
-  // let getData = async()=>{
-  //   try{
-  //     let response = await Axios.get("https://cados-api.onrender.com/advocates/")
-  //     console.log('RESPONSE:', response)
-  //     setAdvocates(response.data)
-  //   }
-  //   catch (error) {
-  //     console.error('Error:', error)
-  //   }
-  // }
-
   return (
     <div>
       <h1>Home</h1>
       <div>
         {advocates.map((advocate, index)=>(
             <div key={index}> 
-            <img src={advocate.advocates.profilePic} alt=""/>
-            <strong>{advocate.advocates.username}</strong>
+            <img src={advocate.advocates.advocate.profilePic} alt=""/>
+            <strong>{advocate.advocates.advocate.username}</strong>
             {console.log('advocate:', advocate)}
-            <Link to={`/Advocates/${advocate.advocates.username}`}>view</Link>
+            <Link to={`/Advocates/${advocate.advocates.advocate.username}`}>view</Link>
             </div>
         ))}
       </div>
