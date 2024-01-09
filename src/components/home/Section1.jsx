@@ -28,7 +28,7 @@ if (loading) {
 }
 
   return (
-    <div>
+    <div className={'mainCont'}>
       <h2>Search developer advocates on this platform</h2>
       <div className={'advocateList'}>
         {advocates.map((advocate, index)=>(
